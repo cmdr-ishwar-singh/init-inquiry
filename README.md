@@ -76,7 +76,7 @@ If the customization at the views level is not enough, you can customize each co
     ```ruby
     class InquiriesController < ApplicationController
       # def new
-      #   super
+      #   @inquiry = Inquiry.new
       # end
       ...
     end
