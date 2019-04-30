@@ -19,15 +19,19 @@ Init-Inquiry 0.1.0 works with Rails 5.2.0 onwards. Add the following line to you
 gem 'init_inquiry'
 ```
 
-And then execute:
-```bash
-$ bundle
-```
-
 Or install it yourself as:
 ```bash
 $ gem install init_inquiry
 ```
+
+Then run `bundle install`
+
+Next, you need to run the generator:
+
+```console
+$ rails generate devise:install
+```
+
 
 ## Contributing
 Contribution directions go here.
