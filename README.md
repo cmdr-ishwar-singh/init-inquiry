@@ -44,7 +44,7 @@ Then run `rails db:migrate`
 
 ### Configuring views
 
-We built Devise to help you quickly develop an application that uses authentication. However, we don't want to be in your way when you need to customize it.
+We built Inquiry to help you quickly develop an application that uses authentication. However, we don't want to be in your way when you need to customize it.
 
 Since Init-Inquiry is an engine, all its views are packaged inside the gem. These views will help you get started, but after some time you may want to change them. If this is the case, you just need to invoke the following generator, and it will copy all views to your application:
 
