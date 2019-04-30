@@ -57,7 +57,7 @@ If you have more than one Inquiry model in your application (such as `Inquiry` a
 Init-Inquiry will use the default view at `app/views/inquiry`. You can also use the generator to generate scoped views:
 
 ```console
-$ rails generate devise:views users
+$ rails generate init-inquiry:views inquiries
 ```
 
 ### Configuring controllers
@@ -75,7 +75,6 @@ If the customization at the views level is not enough, you can customize each co
 
     ```ruby
     class InquiriesController < ApplicationController
-      # GET /resource/sign_in
       # def new
       #   super
       # end
