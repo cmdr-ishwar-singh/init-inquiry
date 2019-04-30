@@ -1,6 +1,6 @@
 ![Devise Logo](https://raw.githubusercontent.com/cmdr-ishwar-singh/init-inquiry/master/init_logo.png)
 
-By [Plataformatec](http://initcoders.com/).
+By [Initcoders](http://initcoders.com/).
 
 Init-Inquiry is a flexible solution for Rails based. It:
 
