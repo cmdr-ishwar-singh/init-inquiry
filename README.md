@@ -1,13 +1,19 @@
 ![Devise Logo](https://raw.githubusercontent.com/cmdr-ishwar-singh/init-inquiry/master/init_logo.png)
 
-# InitInquiry
-Short description and motivation.
+By [Plataformatec](http://initcoders.com/).
 
-## Usage
-How to use my plugin.
+Init-Inquiry is a flexible solution for Rails based. It:
 
-## Installation
-Add this line to your application's Gemfile:
+* Is Rack based;
+* Is a complete MVC solution based on Rails engines;
+
+## Starting with Rails?
+
+If you are building your first Rails application, we recommend you *do not* use Init-Inquiry.
+
+## Getting started
+
+Init-Inquiry 0.1.0 works with Rails 5.2.0 onwards. Add the following line to your Gemfile:
 
 ```ruby
 gem 'init_inquiry'
