@@ -21,13 +21,12 @@ module InitInquiry
 
 	    protected
       
-
       def view_directory(name, _target_path = nil)
-	        directory name.to_s, _target_path || "#{target_path}" do |content|
-	          if scope
-	            content 
-	          end
-	        end
+        directory name.to_s, _target_path || "#{target_path}" do |content|
+          if scope
+            content
+          end
+        end
 	    end
 
       # target path for your application             
@@ -44,7 +43,9 @@ module InitInquiry
     class FormForGenerator < Rails::Generators::Base #:nodoc:
       include ViewPathTemplates
       	# source_root File.expand_path("../../../../app/views/init_inquiry", __FILE__)
-        source_root File.expand_path("../../templates/erb", __FILE__)
+        source_root File.expand_path("../../templates/views", __FILE__)
+
+        
      	  desc "Copies default Inquiry views to your application."
         hide!
     end
@@ -52,8 +53,10 @@ module InitInquiry
     class ViewsGenerator < Rails::Generators::Base
     	argument :scope, required: false, default: "inquiry",
                          desc: "The scope to copy views to"
-       invoke FormForGenerator
+      invoke FormForGenerator
       
+
+
       protected
        
       def singular_scope
