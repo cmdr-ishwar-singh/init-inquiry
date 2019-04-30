@@ -1,3 +1,5 @@
+![Devise Logo](https://raw.github.com/cmdr-ishwar-singh/init-inquiry/master/devise.png)
+
 # InitInquiry
 Short description and motivation.
 
