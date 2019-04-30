@@ -29,8 +29,15 @@ Then run `bundle install`
 Next, you need to run the generator:
 
 ```console
-$ rails generate devise:install
+$ rails generate init-inquiry:install
 ```
+
+In the following command you will replace `MODEL` with the class name used for the application’s inquiries (it’s frequently `Inquiry` but could also be `Contact`). This will create a model (if one does not exist) and configure it with the default Init-Inquiry modules. The generator also configures your `config/routes.rb` file to point to the Inquiry controller.
+
+```console
+$ rails generate init-inquiry MODEL
+```
+
 
 
 ## Contributing
