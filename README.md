@@ -1,5 +1,7 @@
 ![Inquiry Logo](https://raw.githubusercontent.com/cmdr-ishwar-singh/init-inquiry/master/init_logo.png)
 
+# InitInquiry
+
 By [Initcoders](http://initcoders.com/).
 
 Init-Inquiry is a flexible solution for Rails based. It:
@@ -53,7 +55,7 @@ $ rails generate init_inquiry:views
 
 If you have more than one Inquiry model in your application (such as `Inquiry` and `Contact`), you will notice that Inquiry uses the same views for all models.
 
-Init-Inquiry will use the default view at `app/views/inquiry`. You can also use the generator to generate scoped views:
+Init-Inquiry will use the default view at `app/views/inquiries`. You can also use the generator to generate scoped views:
 
 ```console
 $ rails generate init_inquiry:views inquiries
@@ -80,7 +82,7 @@ If the customization at the views level is not enough, you can customize each co
       ...
     end
     ```
-    (Use the -c flag to specify a controller, for example: `rails generate init_inquiry:controllers inquiries `)
+    (for example: `rails generate init_inquiry:controllers inquiries `)
 
 
 ## Contributing
