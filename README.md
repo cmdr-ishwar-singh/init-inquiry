@@ -37,7 +37,7 @@ In the following command you will replace `MODEL` with the class name used for t
 $ rails generate init_inquiry MODEL
 ```
 
-Next, add the model, you'll need to run
+Next, check the MODEL for any additional configuration options you might want to add. If you add an option, be sure to inspect the migration file (created by the generator if your ORM supports them) and uncomment the appropriate section.  For example, if you add the model, you'll need to run
 
 Then run `rails db:migrate`
 
