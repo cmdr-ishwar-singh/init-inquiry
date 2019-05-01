@@ -38,13 +38,55 @@ module InitInquiry
       	  @plural_scope ||= scope.presence && scope.underscore.pluralize
       end
 
+      def singular_scope
+        @singular_scope ||= scope.presence && scope.underscore.singularize
+      end
+
     end
 
     class FormForGenerator < Rails::Generators::Base #:nodoc:
       include ViewPathTemplates
-      	# source_root File.expand_path("../../../../app/views/init_inquiry", __FILE__)
-        source_root File.expand_path("../../templates/views", __FILE__)
+      	source_root File.expand_path("../../../../app/views/init_inquiry", __FILE__)
 
+        def create_helper_file
+          create_file "app/helpers/#{plural_scope}_helper.rb", <<-FILE
+module #{plural_scope.capitalize}Helper
+
+    def resources_class
+      return #{singular_scope.capitalize}
+    end
+
+    def resources_inquiry
+      return :#{singular_scope}
+    end
+
+    def resources_inquiry_obj
+      return @#{singular_scope}
+    end
+
+    def resources_inquiries
+      return :#{plural_scope}
+    end
+
+    def resources_inquiries_obj
+        return @#{plural_scope}
+    end
+
+    def resources_inquiries_path
+      return #{plural_scope}_path
+    end
+
+    def resources_inquiry_path(resource)
+      return #{singular_scope}_path(resource)
+    end
+
+    def resources_new_inquiry_path
+      return new_#{singular_scope}_path
+    end
+
+end
+    FILE
+        end
         
      	  desc "Copies default Inquiry views to your application."
         hide!
@@ -54,15 +96,7 @@ module InitInquiry
     	argument :scope, required: false, default: "inquiry",
                          desc: "The scope to copy views to"
       invoke FormForGenerator
-      
-
-
-      protected
-       
-      def singular_scope
-        @singular_scope ||= scope.presence && scope.underscore.singularize
-      end
-    	
+      	
   	end
   end
 end

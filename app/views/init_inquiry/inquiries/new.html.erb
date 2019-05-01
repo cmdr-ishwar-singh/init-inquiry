@@ -6,11 +6,13 @@
               <div class="portlet-box portlet-gutter ui-buttons-col mb-30">
                   <div class="portlet-header flex-row flex d-flex align-items-center b-b">
                       <div class="flex d-flex flex-column">
-                          <h3>New Inquiry</h3> 
+                          <h3>New <%= resources_inquiry.capitalize %></h3>
                           <span class="portlet-subtitle"></span>
                       </div>
                   </div>
-                  <%= render 'form', inquiry: @inquiry %>
+                  <%= render partial: "form", locals: {url_path: resources_inquiries_path , method_name: :post, label: 'New'} %>
+                   <%#= render 'form', inquiry: @inquiry %>
+
               </div><!--portlet--> 
           </div>
           <div class="col-lg-3"></div>

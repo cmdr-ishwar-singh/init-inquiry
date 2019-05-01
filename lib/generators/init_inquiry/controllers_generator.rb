@@ -12,7 +12,12 @@ module InitInquiry
 	    def create_controllers
 	      template "inquiries_controller.rb",
                    "app/controllers/#{plural_scope}_controller.rb"
-	     end
+	    end
+
+      def add_devise_routes
+        route "resources :#{plural_scope}".dup
+        route "get '/#{plural_scope}/:id/update' , to: '#{plural_scope}#update' , as: '#{plural_scope}_update'".dup
+      end
 
 	    protected
 

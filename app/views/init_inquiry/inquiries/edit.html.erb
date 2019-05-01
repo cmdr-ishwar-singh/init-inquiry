@@ -1,5 +1,3 @@
-
-
 <div class="page-content">
   <div class="container-fluid">
       <div class="row">
@@ -8,11 +6,13 @@
               <div class="portlet-box portlet-gutter ui-buttons-col mb-30">
                   <div class="portlet-header flex-row flex d-flex align-items-center b-b">
                       <div class="flex d-flex flex-column">
-                          <h3>Edit Inquiry</h3> 
+                          <h3>Edit <%= resources_inq_class %></h3> 
                           <span class="portlet-subtitle"></span>
                       </div>
                   </div>
-                  <%= render 'form', inquiry: @inquiry %>
+                  <%= render partial: "form", locals: {url_path:"/#{resources_inquries}/#{params[:id]}", method_name: :put, label: 'New'} %>
+                  <%#= render 'form', inquiry: @inquiry %>
+                  
               </div><!--portlet--> 
           </div>
           <div class="col-lg-3"></div>

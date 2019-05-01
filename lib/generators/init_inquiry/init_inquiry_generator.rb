@@ -16,11 +16,6 @@ module InitInquiry
 
       hook_for :orm
 
-      def add_devise_routes
-        route "resources :#{plural_name}".dup
-        route "get '/#{plural_name}/:id/update' , to: '#{plural_name}#update' , as: '#{plural_name}_update'".dup
-      end
-
       protected
       # target path for your application
       def target_path

@@ -34,7 +34,7 @@ class <%= plural_scope.capitalize %>Controller < ApplicationController
       if @inq.update(:status => 0)
          flash[:success] = '<%= prefix_scope %> has been Completed.'
       end
-      redirect_to inquiries_path
+      redirect_to <%= plural_scope %>_path
 
   end
 
