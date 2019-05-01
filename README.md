@@ -1,4 +1,4 @@
-![Devise Logo](https://raw.githubusercontent.com/cmdr-ishwar-singh/init-inquiry/master/init_logo.png)
+![Inquiry Logo](https://raw.githubusercontent.com/cmdr-ishwar-singh/init-inquiry/master/init_logo.png)
 
 By [Initcoders](http://initcoders.com/).
 
