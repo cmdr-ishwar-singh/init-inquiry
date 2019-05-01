@@ -4,7 +4,6 @@ By [Initcoders](http://initcoders.com/).
 
 Init-Inquiry is a flexible solution for Rails based. It:
 
-* Is Rack based;
 * Is a complete MVC solution based on Rails engines;
 
 ## Starting with Rails?
@@ -38,13 +37,13 @@ In the following command you will replace `MODEL` with the class name used for t
 $ rails generate init_inquiry MODEL
 ```
 
-Next, check the MODEL for any additional configuration options you might want to add, such as confirmable or lockable. If you add an option, be sure to inspect the migration file (created by the generator if your ORM supports them) and uncomment the appropriate section.  For example, if you add the confirmable option in the model, you'll need to uncomment the Confirmable section in the migration.
+Next, add the model, you'll need to run
 
 Then run `rails db:migrate`
 
 ### Configuring views
 
-We built Inquiry to help you quickly develop an application that uses authentication. However, we don't want to be in your way when you need to customize it.
+We built Inquiry to help you quickly develop an application that uses inquiry. However, we don't want to be in your way when you need to customize it.
 
 Since Init-Inquiry is an engine, all its views are packaged inside the gem. These views will help you get started, but after some time you may want to change them. If this is the case, you just need to invoke the following generator, and it will copy all views to your application:
 
